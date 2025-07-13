@@ -1,16 +1,5 @@
 # 🧠 FeelingsFinder - A Simple Sentiment Analyzer
 
-```
-  ______      _ _       _             
- |  ____|    (_) |     | |            
- | |__  __  ___| |_   _| | ___  ___   
- |  __| \ \/ / | | | | | |/ _ \/ __|  
- | |____ >  <| | | |_| | |  __/\__ \  
- |______/_/\_\_|_|\__,_|_|\___||___/  
-                                      
-         FeelingsFinder 🧠❤️
-```
-
 ## 📌 Overview
 
 **FeelingsFinder** is a beginner-friendly **Python** tool that uses **TextBlob** to perform sentiment analysis on user-inputted text. It classifies the sentiment as **Positive**, **Negative**, or **Neutral**, and provides **polarity** and **subjectivity** scores.
@@ -54,41 +43,6 @@
 
 ---
 
-## 🧾 Full Code
-
-```python
-from textblob import TextBlob
-
-def analyze_sentiment(text):
-    blob = TextBlob(text)
-    polarity = blob.sentiment.polarity
-    subjectivity = blob.sentiment.subjectivity
-    if polarity > 0:
-        sentiment = "Positive"
-    elif polarity < 0:
-        sentiment = "Negative"
-    else:
-        sentiment = "Neutral"
-    return sentiment, polarity, subjectivity
-
-def main():
-    print("Welcome to the Sentiment Analyzer!")
-    while True:
-        text = input("\nEnter text to analyze (or type 'exit' to quit): ")
-        if text.lower() == 'exit':
-            break
-        sentiment, polarity, subjectivity = analyze_sentiment(text)
-        print(f"\nSentiment: {sentiment}")
-        print(f"Polarity Score: {polarity}")
-        print(f"Subjectivity Score: {subjectivity}")
-        print("-" * 50)
-
-if __name__ == "__main__":
-    main()
-```
-
----
-
 ## 📊 Sample Output
 
 ```
@@ -112,23 +66,3 @@ Subjectivity Score: 0.6
 - Add emoji or color-based output
 
 ---
-
-## 👩‍💻 Author
-
-**Sanjana Prajapati**  
-*BSc AIML | Passionate about AI and building creative tools*
-
----
-
-## 📁 Folder Structure
-
-```
-FeelingsFinder/
-│
-├── sentiment_analyzer.py
-└── README.md
-```
-
----
-
-> If you like this project, feel free to give it a ⭐ on GitHub or suggest new features!
